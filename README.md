@@ -1,0 +1,2 @@
+# AndroidManifestAdder
+在Android打时候在清单文件中动态插入代码
