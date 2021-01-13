@@ -1,0 +1,2 @@
+include ':app', ':manifestreplace'
+rootProject.name='ManifestReplace'

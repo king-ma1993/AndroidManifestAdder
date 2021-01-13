@@ -1,0 +1,24 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+apply plugin: 'kotlin'
+apply plugin: 'groovy'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.2.1'
+    implementation 'org.codehaus.groovy:groovy:2.4.7'
+    implementation 'org.redundent:kotlin-xml-builder:1.4'
+}
+
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../repo'))
+        pom.groupId = 'com.myl.manifest'
+        pom.artifactId = 'manifestplugin'
+        pom.version = '1.0.0'
+    }
+}
+
